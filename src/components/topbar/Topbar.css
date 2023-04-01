@@ -37,6 +37,16 @@
     margin-left: 10px;
 }
 
+.searchInput{
+    border: none;
+    width: 80%;
+    margin-left: 10px;
+}
+
+.searchInput:focus{
+    outline: none;
+}
+
 .topbatRight{
     flex: 4;
 }
