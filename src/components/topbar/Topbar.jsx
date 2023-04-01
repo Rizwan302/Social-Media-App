@@ -12,7 +12,7 @@ export default function Topbar() {
       </div>
       <div className="topbatCenter">
         <div className="searchbar">
-          <BiSearch />
+          <BiSearch className="searchIcon" />
           <input type="search" placeholder="Search" className="searchInput" />
         </div>
       </div>
@@ -35,7 +35,7 @@ export default function Topbar() {
             <span className="topbarIconBadge">10</span>
           </div>
         </div>
-        <img src="/assets/parson/Zaira.jpeg" alt="" className="topbarImage" />
+        <img src="/assets/parson/Zaira.jpeg" alt="" className="topbarImg" />
       </div>
     </div>
   );
