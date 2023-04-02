@@ -1,11 +1,14 @@
 import React from 'react'
+import Share from '../share/Share'
 import './Feed.css'
 
 
 function Feed() {
   return (
     <div className='feed'>
-      Feeed
+      <div className="feedwarpper">
+        <Share/>
+      </div>
     </div>
   )
 }
