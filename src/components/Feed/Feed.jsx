@@ -1,6 +1,7 @@
 import React from 'react'
 import Post from '../Post/Post'
 import Share from '../share/Share'
+import {Posts} from '../../dummyData'
 import './Feed.css'
 
 
@@ -9,7 +10,9 @@ function Feed() {
     <div className='feed'>
       <div className="feedwarpper">
         <Share/>
-        <Post/>
+        {Posts.map((p) => {
+          <Post key={p.id} post={p} />
+        })}
       </div>
     </div>
   )
