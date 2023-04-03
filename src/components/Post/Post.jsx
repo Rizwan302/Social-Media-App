@@ -3,35 +3,37 @@ import './Post.css'
 import { GrMoreVertical } from "react-icons/gr";
 import { AiFillLike } from "react-icons/ai";
 import { FcLike } from "react-icons/fc";
+import { Users } from '../../dummyData'
 
 
 
-function Post() {
-  return (
+
+function Post({post}) {
+    return (
     <div className='post'>
         <div className="postWrapper">
             <div className="postTop">
                 <div className="postTopLeft">
-                    <img src="/assets/parson/Zaira.jpeg" alt="" className="postProfileImg" />
-                    <span className="postUsername">Hello</span>
-                    <span className="postDate">5 min</span>
+                    <img src={Users.filter((u) => u.id === post?.userId)[0].profilePicture} alt="" className="postProfileImg" />
+                    <span className="postUsername">{Users.filter((u) => u.id === post?.userId)[0].username}</span>
+                    <span className="postDate">{post.date}</span>
                 </div>
                 <div className="postTopRight">
                     <GrMoreVertical/>
                 </div>
             </div>
             <div className="postCenter">
-                <span className="PostText">My Post</span>
-                <img src="/assets/parson/Zaira.jpeg" alt="" className='postImg' />
+                <span className="PostText">{post?.desc}</span>
+                <img src={post.photo} alt="" className='postImg' />
             </div>
             <div className="postBottom">
                 <div className="postBottomLeft">
                     <AiFillLike className="likeIcon" />
                     <FcLike className="likeIcon" />
-                    <span className="postLikeCounter">123 like</span>
+                    <span className="postLikeCounter">{post.like} people like </span>
                 </div>
                 <div className="postBottomRight">
-                    <span className="postCommentText">9 command</span>
+                    <span className="postCommentText">{post.comment} command</span>
                 </div>
             </div>
         </div>

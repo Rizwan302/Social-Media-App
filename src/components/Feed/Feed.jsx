@@ -10,9 +10,9 @@ function Feed() {
     <div className='feed'>
       <div className="feedwarpper">
         <Share/>
-        {Posts.map((p) => {
+        {Posts.map((p) => (
           <Post key={p.id} post={p} />
-        })}
+        ))}
       </div>
     </div>
   )
