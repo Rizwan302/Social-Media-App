@@ -1,6 +1,9 @@
 import React from 'react'
 import './Share.css'
 import {MdPermMedia} from 'react-icons/md'
+import {BiTagAlt} from 'react-icons/bi'
+import {ImLocation2} from 'react-icons/im'
+import {ImGrin2} from 'react-icons/im'
 
 
 export default function Share() {
@@ -8,7 +11,7 @@ export default function Share() {
     <div className='share'>
       <div className="sharewarpper">
         <div className="shareTop">
-            <img src="/assets/parson/zaira.jpeg" alt="" className="shareProfileImg" />
+            <img src="/assets/parson/za2.jpeg" alt="" className="shareProfileImg" />
             <input placeholder='What is your Name' className="shareInput" />
         </div>
         <hr className="shareHr" />
@@ -20,15 +23,15 @@ export default function Share() {
                     <span className="shareOptionText">Phote or Video</span>
                 </div>
                 <div className="shareOption">
-                    <MdPermMedia className='shareIcon'/>
+                    <BiTagAlt className='shareIcon'/>
                     <span className="shareOptionText">Tag</span>
                 </div>
                 <div className="shareOption">
-                    <MdPermMedia className='shareIcon'/>
+                    <ImLocation2 className='shareIcon'/>
                     <span className="shareOptionText">Location</span>
                 </div>
                 <div className="shareOption">
-                    <MdPermMedia className='shareIcon'/>
+                    <ImGrin2 className='shareIcon'/>
                     <span className="shareOptionText">Felling</span>
                 </div>
             </div>

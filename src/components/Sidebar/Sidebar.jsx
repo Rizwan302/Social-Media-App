@@ -9,7 +9,8 @@ import {BsQuestionSquareFill} from 'react-icons/bs'
 import {FcSlrBackSide} from 'react-icons/fc'
 import {BsCalendarEvent} from 'react-icons/bs'
 import {FaGraduationCap} from 'react-icons/fa'
-
+import { Users } from '../../dummyData'
+import CloseFriend from '../closeFriend/CloseFriend'
 
 
 export default function Sidebar() {
@@ -57,38 +58,11 @@ export default function Sidebar() {
         <button className="sidebarbtn">Show more</button>
         <hr className='sidebarhr'/>
         <ul className="sidebarFrinedList">
-          <li className="sidebarFrined">
-            <img src="/assets/parson/Zaira.jpeg" alt="" className="sidebarFrinedImg" />
-            <span className="sidebarFrinedNmae">Hello</span>
-          </li>
-          <li className="sidebarFrined">
-            <img src="/assets/parson/Zaira.jpeg" alt="" className="sidebarFrinedImg" />
-            <span className="sidebarFrinedNmae">Hello</span>
-          </li>
-          <li className="sidebarFrined">
-            <img src="/assets/parson/Zaira.jpeg" alt="" className="sidebarFrinedImg" />
-            <span className="sidebarFrinedNmae">Hello</span>
-          </li>
-          <li className="sidebarFrined">
-            <img src="/assets/parson/Zaira.jpeg" alt="" className="sidebarFrinedImg" />
-            <span className="sidebarFrinedNmae">Hello</span>
-          </li>
-          <li className="sidebarFrined">
-            <img src="/assets/parson/Zaira.jpeg" alt="" className="sidebarFrinedImg" />
-            <span className="sidebarFrinedNmae">Hello</span>
-          </li>
-          <li className="sidebarFrined">
-            <img src="/assets/parson/Zaira.jpeg" alt="" className="sidebarFrinedImg" />
-            <span className="sidebarFrinedNmae">Hello</span>
-          </li>
-          <li className="sidebarFrined">
-            <img src="/assets/parson/Zaira.jpeg" alt="" className="sidebarFrinedImg" />
-            <span className="sidebarFrinedNmae">Hello</span>
-          </li>
-          <li className="sidebarFrined">
-            <img src="/assets/parson/Zaira.jpeg" alt="" className="sidebarFrinedImg" />
-            <span className="sidebarFrinedNmae">Hello</span>
-          </li>
+          {/* -------start-------- */}
+            {Users.map(u=>(
+              <CloseFriend ket={u.id} friend={u} />
+            ))}
+          {/* ----------end------------ */}
         </ul>
       </div>
     </div>
