@@ -1,5 +1,7 @@
 import React from 'react'
 import './Rightbar.css'
+import { Users } from '../../dummyData'
+import Outline from '../outline/Outline'
 // import { BiSearch } from "react-icons/bi";
 
 function Rightbar() {
@@ -18,14 +20,11 @@ function Rightbar() {
         <ul className="rightbarFriendList">
 
           {/* ---------------start--------------- */}
-          <li className="rightBarFriend">
-            <div className="rightbarprofileContainer">
-              <img src="/assets/parson/Zaira.jpeg" alt="" className="rightbarprofileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUseName">My Friend</span>
-
-          </li>
+          {
+            Users.map(u=>(
+              <Outline key={u.id} user={u} />
+            ))
+          }
           {/* ----------end------------- */}
         </ul>
 
