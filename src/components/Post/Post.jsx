@@ -15,6 +15,7 @@ function Post({post}) {
 
     const likeHandeler = () =>{
         setLike(isliked ? like -1 : like + 1)
+        setIsLiked(!isliked)
     }
     return (
     <div className='post'>
