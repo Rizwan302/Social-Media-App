@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Post.css'
 import { GrMoreVertical } from "react-icons/gr";
 import { AiFillLike } from "react-icons/ai";
@@ -9,6 +9,13 @@ import { Users } from '../../dummyData'
 
 
 function Post({post}) {
+
+    const [like, setLike] = useState(post.like)
+    const [isliked, setIsLiked] = useState(false)
+
+    const likeHandeler = () =>{
+        setLike(isliked ? like -1 : like + 1)
+    }
     return (
     <div className='post'>
         <div className="postWrapper">
@@ -28,9 +35,9 @@ function Post({post}) {
             </div>
             <div className="postBottom">
                 <div className="postBottomLeft">
-                    <AiFillLike className="likeIcon" />
-                    <FcLike className="likeIcon" />
-                    <span className="postLikeCounter">{post.like} people like </span>
+                    <AiFillLike className="likeIcon" onClick={likeHandeler} />
+                    <FcLike className="likeIcon" onClick={likeHandeler} />
+                    <span className="postLikeCounter">{like} people like </span>
                 </div>
                 <div className="postBottomRight">
                     <span className="postCommentText">{post.comment} command</span>
