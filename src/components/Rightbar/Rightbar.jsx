@@ -4,17 +4,15 @@ import { Users } from '../../dummyData'
 import Outline from '../outline/Outline'
 // import { BiSearch } from "react-icons/bi";
 
-function Rightbar() {
-  return (
-    <div className='rightbar'>
-      <div className="rightbarWrapper">
-        <div className="brithdayContainer">
+function Rightbar({profile}) {
+  const HomeRightbar = () => {
+    return(
+      <>
+      <div className="brithdayContainer">
           <img src="/assets/parson/Zaira.jpeg" alt="" className="brithdayImg" />
           <span className="brithdaytext"><b>Hello Friend</b> and <b> 3 other friend </b> have a bright today
           </span>
         </div>
-
-
         <img src="/assets/parson/Zaira.jpeg" alt="" className="rightbarAd" />
         <h4 className="rightbarTitle">Online Friend</h4>
         <ul className="rightbarFriendList">
@@ -27,7 +25,21 @@ function Rightbar() {
           }
           {/* ----------end------------- */}
         </ul>
+      </>
+    )
+  }
 
+  const ProfileRightbar = () => {
+    return(
+      <h1>hey its profile</h1>
+    )
+  }
+
+
+  return (
+    <div className='rightbar'>
+      <div className="rightbarWrapper">
+        <HomeRightbar/>
       </div>
     </div>
   )
