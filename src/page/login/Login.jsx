@@ -13,7 +13,13 @@ function Login() {
         </div>
         <div className="loginRight">
             <div className="loginBox">
-                
+                <input placeholder='Email' className="loginInput" />
+                <input placeholder='password' className="loginInput" />
+                <button className="loginButton">Login</button>
+                <span className="loginForgot">Forgot Password?</span>
+                <button className="loginRegisterButton">
+                    Create a New Account
+                </button>
             </div>
         </div>
       </div>
