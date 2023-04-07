@@ -43,9 +43,28 @@
     justify-content: space-between;
 }
 
-.loginInput{}
+.loginInput{
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: 18px;
+    padding-left: 20px;
+}
 
-.loginButton{}
+.loginInput:focus{
+    border: none;
+}
+
+.loginButton{
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1775ee;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
 
 .loginForgot{}
 
